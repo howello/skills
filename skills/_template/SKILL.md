@@ -1,5 +1,5 @@
 ---
-name: your-skill-name
+name: skill模板
 description: 一句话描述这个技能的功能和适用场景
 metadata:
   type: skill
