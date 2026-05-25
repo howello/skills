@@ -1,0 +1,6 @@
+{
+  "skills": {
+    "enabled": true,
+    "paths": ["skills/"]
+  }
+}
