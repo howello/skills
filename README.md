@@ -8,8 +8,12 @@
 .
 ├── README.md              # 本文件 - 项目概览
 ├── skills/                # 技能文件存放目录
-│   ├── _template.md       # 新建技能时的参考模板
-│   └── *.md               # 各技能定义文件
+│   ├── _template/         # 新建技能时的参考模板
+│   │   └── SKILL.md
+│   ├── dev-workflow/      # 开发工作流技能
+│   │   └── SKILL.md
+│   └── <skill-name>/      # 各技能文件夹
+│       └── SKILL.md       # 技能定义文件（必需入口）
 ├── templates/             # 项目/代码模板（非技能文件）
 ├── scripts/               # 辅助脚本
 └── .claude/
@@ -18,7 +22,7 @@
 
 ## 技能格式
 
-每个技能是一个 Markdown 文件，包含 YAML frontmatter：
+每个技能是一个独立文件夹，内含 `SKILL.md` 文件，包含 YAML frontmatter：
 
 ```markdown
 ---
@@ -33,9 +37,9 @@ metadata:
 
 ## 如何添加新技能
 
-1. 在 `skills/` 目录下创建 `<技能名>.md`
-2. 参考 `skills/_template.md` 的格式编写
-3. 在 `.claude/settings.json` 中注册（如需要）
+1. 在 `skills/` 目录下创建 `<技能名>/` 文件夹
+2. 在该文件夹内创建 `SKILL.md`，参考 `skills/_template/SKILL.md` 的格式编写
+3. 在 `INDEX.md` 中登记
 
 ## 使用方法
 
