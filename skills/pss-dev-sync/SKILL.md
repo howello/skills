@@ -1,6 +1,6 @@
 ---
 name: pss-dev-sync
-description: Use when needing to extract currently-tracked files from a specific git commit into a compressed archive for review or sharing. Manual trigger only - does not auto-load.
+description: 手动触发，从指定 git 提交提取变更文件的当前版本，打包为 modify.zip 供审查或分享。
 metadata:
   type: skill
   tags: [git, file, archive, manual]
@@ -15,6 +15,15 @@ metadata:
 手动调用，通过 `Skill` 工具或 `/pss-dev-sync` 触发。
 
 ## 执行步骤
+
+### 0. 检查 worktree 状态
+
+如果当前在 git worktree 中，先切回主分支：
+
+```powershell
+git worktree list
+# 如果当前在 worktree 中，切换到主分支目录
+```
 
 ### 1. 预备检查
 
